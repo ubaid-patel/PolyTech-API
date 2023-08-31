@@ -32,15 +32,15 @@ HOD can allocates subjects to faculty members. This feature facilitates effectiv
 
 ## Getting Started
 ### Api documentation
-You can view complete api documentation at [gptglbapi.vercel.app](https://gptglbapi.vercel.app)
+You can view complete api documentation at [gptglbapi.vercel.app](https://documenter.getpostman.com/view/25483510/2s9Y5crez3)
 ### Depolyemnt
 For demo visit [https://gptglb.vercel.app](https://gptglb.vercel.app)
 
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/college-management-app.git
-cd college-management-app
+git clone https://github.com/ubaidpatel595/gptglbapi.git
+cd gptglbapi
 ```
 ### Install the required dependencies using npm:
 ```
@@ -49,7 +49,7 @@ npm install
 
 ### Database Setup
 This app requires a database to store user information, attendance records, marks, and other data.we used mysql database create a database then
-Download our db.sql and import it in the created db [click here to download](https://documenter.getpostman.com/view/25483510/2s9Y5crez3)
+Download our db.sql and import it in the created db [click here to download](https://urlpro.vercel.app/kj8Gbh)
 
 ### Create a .env file in root directory
 ```

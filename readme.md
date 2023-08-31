@@ -49,7 +49,7 @@ npm install
 
 ### Database Setup
 This app requires a database to store user information, attendance records, marks, and other data.we used mysql database create a database then
-Download our db.sql and import it in the created db [click here to download](https://urlpro.vercel.app/kj8Gbh)
+Download our db.sql and import it in the created db [click here to download](https://documenter.getpostman.com/view/25483510/2s9Y5crez3)
 
 ### Create a .env file in root directory
 ```

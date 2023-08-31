@@ -82,6 +82,10 @@ app.use('/attendance', attendenceRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+app.get("/",(req,res)=>{
+  res.redirect("https://documenter.getpostman.com/view/25483510/2s9Y5crez3")
+})
 // // error handler
 // app.use(function(err, req, res, next) {
 //   // set locals, only providing error in development

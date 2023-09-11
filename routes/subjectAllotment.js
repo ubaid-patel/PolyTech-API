@@ -51,14 +51,14 @@ router.post("/delete", function (req, res) {
     }
 })
 
-router.get("/:sem",function(req,res){
+router.get("/",function(req,res){
     const verified = verifyToken(req.headers.authorization);
     if(verified){
         let query;
         if(verified.role.toLowerCase() === 'faculty'){
-           query =  `SELECT * FROM subjectalloted WHERE branch ='${verified.branch}' and sem = '${req.params.sem}'`
+           query =  `SELECT * FROM subjectalloted WHERE branch ='${verified.branch}' and teacher = '${verified.userid}'`
         }else{
-            query = `SELECT * FROM subjectalloted WHERE branch ='${verified.branch}' and teacher = '${verified.userid}'`
+            query = `SELECT * FROM subjectalloted WHERE branch ='${verified.branch}'`
         }
         req.db.query(query,(err,results)=>{
             res.status(200).send(results)

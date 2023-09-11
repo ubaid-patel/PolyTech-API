@@ -38,16 +38,16 @@ router.post("/mark",async function(req,res){
 })
 
 router.get("/",function(req,res){
-    const verified = verifyToken();
+    const verified = verifyToken(req.headers.authorization);
     if(verified){
+        let query;
         if(verified.role.toUpperCase() === "STUDENT"){
-            const query = `SELECT * FROM attendance WHERE reg ='${verified.userid}' and subject ='${req.body.subject}'`;
+            query = `SELECT * FROM attendance WHERE reg ='${verified.userid}' and subject ='${req.body.subject}'`;
         }else{
-            const query = `SELECT * FROM attendance WHERE  subject ='${req.body.subject}' AND date = '${req.body.date}' `+
-            `INNER JOIN students on attendance.sem = students.sem'`
+            query = `SELECT * FROM attendance WHERE  subject ='${req.body.subject}' AND date = '${req.body.date}' `;
         }
         req.db.query(query,(er,results)=>{
-
+            res.json(results)
         })
     }else{
         res.status(401).json({message:"Session expired"})

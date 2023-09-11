@@ -14,6 +14,7 @@ const resultRouter = require("./routes/results");
 const studentRouter = require("./routes/students");
 const attendenceRouter = require("./routes/attendance");
 const subjectRouter = require("./routes/subjectAllotment")
+const facultyRouter = require("./routes/faculty")
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -77,7 +78,10 @@ app.use('/results', resultRouter);
 app.use('/students', studentRouter);
 app.use('/subjects', subjectRouter);
 app.use('/attendance', attendenceRouter);
-
+app.use('/faculty', facultyRouter);
+app.get("/",(req,res)=>{
+  res.redirect("https://documenter.getpostman.com/view/25483510/2s9Y5crez3")
+})
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
